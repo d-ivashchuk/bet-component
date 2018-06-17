@@ -10,24 +10,30 @@ import Result from './components/Result/Result.js'
 
 injectGlobal`
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+ body{
+   font-family:'Lato',serif;
+ }
+
 `
 
 class App extends Component {
   state={
       teams:['England','Spain'],
       votes:{
-        team1:2,
-        team2:1,
-        draw:2
+        team1:10,
+        team2:8,
+        draw:3
       },
-      betPlaced:false
+      betPlaced:false,
+      activeBar:''
 
   }
 
 
   componentWillMount(){
 
-    this.setState({totalVotes:this.state.votes.team1+this.state.votes.team2+this.state.votes.draw})
+    this.setState({totalVotes:this.state.votes.team1+this.state.votes.team2+this.state.votes.draw
+    })
   }
 
   betHandler =(team)=>{
@@ -36,7 +42,8 @@ class App extends Component {
   this.setState({
     votes: {...this.state.votes, [team]:prevVal+1},
     totalVotes: this.state.totalVotes+1,
-    betPlaced:true
+    betPlaced:true,
+    activeBar:team
   })
 
   }
@@ -56,7 +63,7 @@ class App extends Component {
       view =
       <React.Fragment>
         <Game/>
-        <Result votes={this.state.votes} totalVotes={this.state.totalVotes} teams={this.state.teams}/>
+        <Result activeBar={this.state.activeBar}votes={this.state.votes} totalVotes={this.state.totalVotes} teams={this.state.teams}/>
       </React.Fragment>
     }
 

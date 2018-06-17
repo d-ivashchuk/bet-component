@@ -1,12 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import esp from '../../assets/esp.svg'
+import uk from '../../assets/uk.svg'
 import styled from 'styled-components'
 
 
 const Title = styled.div`
+
 font-weight:bold;
 margin-top:1em;
 text-align:center;
+text-transform:uppercase;
+
 `
 const Flag = styled.div`
 margin: 2em;
@@ -23,10 +28,10 @@ justify-content:center;
 const game = (props) => {
   return (
     <React.Fragment>
-      <Title>Who's going to win???</Title>
+      <Title>Who is going to win?</Title>
         <FlagContainer>
-          <Flag></Flag>
-          <Flag></Flag>
+          <Flag><img src={uk} /></Flag>
+          <Flag><img src={esp}  /></Flag>
         </FlagContainer>
     </React.Fragment>
   )
