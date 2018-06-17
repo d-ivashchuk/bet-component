@@ -8,21 +8,24 @@ import styled from 'styled-components'
 const Title = styled.div`
 
 font-weight:bold;
-margin-top:1em;
+margin-top:0.5em;
+margin-bottom:0.5em;
 text-align:center;
 text-transform:uppercase;
-
+font-size:2em;
 `
-const Flag = styled.div`
-margin: 2em;
-width:100px;
-height:100px;
+const Flag = styled.img`
+margin: 0.8em;
+padding:0.2em;
+width:6em;
+height:6em;
 border-radius:50px;
-background-color:#BADA55;
+
 `
 const FlagContainer = styled.div`
 display:flex;
 justify-content:center;
+margin-bottom:0.8em;
 `
 
 const game = (props) => {
@@ -30,8 +33,8 @@ const game = (props) => {
     <React.Fragment>
       <Title>Who is going to win?</Title>
         <FlagContainer>
-          <Flag><img src={uk} /></Flag>
-          <Flag><img src={esp}  /></Flag>
+          <Flag src={uk}/>
+          <Flag src={esp}/>
         </FlagContainer>
     </React.Fragment>
   )

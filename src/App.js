@@ -43,9 +43,19 @@ class App extends Component {
     votes: {...this.state.votes, [team]:prevVal+1},
     totalVotes: this.state.totalVotes+1,
     betPlaced:true,
-    activeBar:team
+    vote:team
   })
 
+  }
+
+  redoHandler = (team)=>{
+    const prevVal = this.state.votes[team];
+    this.setState({
+      votes: {...this.state.votes, [team]:prevVal-1},
+      totalVotes: this.state.totalVotes-1,
+      betPlaced:false,
+      activeBar:''
+    })
   }
 
 
@@ -63,7 +73,7 @@ class App extends Component {
       view =
       <React.Fragment>
         <Game/>
-        <Result activeBar={this.state.activeBar}votes={this.state.votes} totalVotes={this.state.totalVotes} teams={this.state.teams}/>
+        <Result redo = {this.redoHandler} vote={this.state.vote} votes={this.state.votes} totalVotes={this.state.totalVotes} teams={this.state.teams}/>
       </React.Fragment>
     }
 

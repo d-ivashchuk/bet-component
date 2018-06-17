@@ -3,56 +3,22 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const StyledButton = styled.button`
+color: #fff !important;
+text-transform: uppercase;
+background: #ed3330;
+padding: 15px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+margin-right:0.7em;
+cursor:pointer;
 
-
-  margin:10px;
-  padding: 12px;
-
-  cursor: pointer;
-  user-select: none;
-  transition: all 150ms linear;
-  text-align: center;
-  white-space: nowrap;
-  text-decoration: none !important;
-  text-transform: none;
-  text-transform: capitalize;
-
-  color: #fff;
-  border: 0 none;
-  border-radius: 4px;
-
-  font-size: 10px;
-  font-weight: 500;
-  line-height: 1.3;
-
-  -webkit-appearance: none;
-  -moz-appearance:    none;
-  appearance:         none;
-
-  justify-content: center;
-  align-items: center;
-  flex: 0 0 100px;
-
-  box-shadow: 2px 5px 10px var(--color-smoke);
-
-  &:hover {
-    transition: all 150ms linear;
-
-    opacity: .85;
-  }
-
-  &:active {
-    transition: all 150ms linear;
-    opacity: .75;
-  }
-
-  color: #FFFFFF;
-  background:#161616;
-
-     &:focus {
-      outline: 1px dotted white;
-      outline-offset: -4px;
-    }
+&:hover{
+background: #434343;
+letter-spacing: 1px;
+box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.1s ease-in 0s;
+}
 `
 
 const ButtonContainer = styled.div`
