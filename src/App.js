@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled,{injectGlobal} from 'styled-components'
+import {injectGlobal} from 'styled-components'
 import Layout from './components/Layout/Layout'
 import Bet from './components/Bet/Bet'
 import Game from './components/Game/Game.js'

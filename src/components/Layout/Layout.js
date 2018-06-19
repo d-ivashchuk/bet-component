@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 const StyledLayout = styled.div`
   background-color: white;
   padding:15px;
   max-width:470px;
+  margin:5rem auto;
 
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
